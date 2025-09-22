@@ -1,60 +1,50 @@
+/* Fundo degradê e centralização */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #FFD8A6, #FFB347);
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  position: relative;
   text-align: center;
 }
 
+/* Container central */
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 600px;
+  width: 100%;
   padding: 20px;
+  box-sizing: border-box;
 }
 
-.paw {
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  background-image: url('assets/images/paw.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  animation: float 2s ease-in-out infinite alternate;
-}
-
-.paw.top-left { top: 10px; left: 10px; }
-.paw.top-right { top: 10px; right: 10px; }
-.paw.bottom-left { bottom: 10px; left: 10px; }
-.paw.bottom-right { bottom: 10px; right: 10px; }
-
-@keyframes float {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-10px); }
-}
-
+/* Título */
 h1 {
   margin-bottom: 20px;
   color: #FF4500;
 }
 
+/* Imagem central */
 .cat-image {
-  max-width: 50%;
+  max-width: 300px;
+  width: 100%;
   height: auto;
   margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+/* Instruções */
 .instruction {
   margin-bottom: 15px;
   color: #FF4500;
   font-size: 1.1em;
 }
 
+/* Emotes */
 .emotes {
   display: flex;
   justify-content: center;
@@ -74,9 +64,31 @@ h1 {
   transform: scale(1.2) rotate(10deg);
 }
 
+/* Vídeo */
 #videoPlayer {
   display: none;
-  max-width: 80%;
+  max-width: 100%;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Patinhas decorativas */
+.paw {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url('assets/images/paw.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  animation: float 2s ease-in-out infinite alternate;
+}
+
+.paw.top-left { top: 10px; left: 10px; }
+.paw.top-right { top: 10px; right: 10px; }
+.paw.bottom-left { bottom: 10px; left: 10px; }
+.paw.bottom-right { bottom: 10px; right: 10px; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-10px); }
 }
